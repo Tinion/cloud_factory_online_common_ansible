@@ -1,7 +1,7 @@
 ---
 # handlers file for common_setup
 
-- name: restart ssh
+- name: restart_ssh
   service: 
     name: ssh
     state: restarted
