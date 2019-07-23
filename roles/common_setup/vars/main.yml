@@ -1,0 +1,12 @@
+---
+# vars file for common_setup
+
+packages:
+  - vim
+  - htop
+  - build-essential 
+  - libssl-dev 
+  - libffi-dev 
+  - python-dev
+  - python-setuptools
+  - python3-pip                                       

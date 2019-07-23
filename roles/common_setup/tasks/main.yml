@@ -1,0 +1,26 @@
+---
+# tasks file for common_setup
+
+- name: Test if python is install on remote server
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal) # noqa 301
+  tags: always
+
+- name: Install required software
+  apt:
+    name: "apt-transport-https"
+    state: present
+
+- name: Update APT cache && Upgrade APT to the latest packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Upgrade APT to the latest packages
+  apt:
+    upgrade: safe
+
+- name: Install required packages
+  apt:
+    name:  "{{ item }}"
+    state: present
+  loop:    "{{ packages }}"
