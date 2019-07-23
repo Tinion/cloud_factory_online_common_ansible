@@ -1,0 +1,14 @@
+# In this file, you can add packages to install in your server
+# To do this just uncomment the following lines
+#
+# All of this packages are defined into the roles/common_setup/vars/mail.yml
+#
+# packages:
+#  - vim
+#  - htop
+#  - build-essential 
+#  - libssl-dev 
+#  - libffi-dev 
+#  - python-dev
+#  - python-setuptools
+#  - python3-pip
